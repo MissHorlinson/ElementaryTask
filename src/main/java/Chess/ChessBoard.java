@@ -19,16 +19,16 @@ public class ChessBoard {
 
     public void setWidth(int width) {this.width = width;}
 
-    public void BoardToScreen(){
+    public void boardToScreen(){
         for(int i = 0; i < height; i++){
             for(int j = 0; j < width; j++){
-                SymbolPrint(i, j);
+                symbolPrint(i, j);
             }
             System.out.println();
         }
     }
 
-    public void SymbolPrint(int row, int cell){
+    public void symbolPrint(int row, int cell){
         if(((cell + row) % 2 ) == 0){
             System.out.print("*");
         } else{

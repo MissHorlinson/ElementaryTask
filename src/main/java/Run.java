@@ -1,5 +1,5 @@
 import Chess.ChessBoard;
-import Envelope.CompareEnvelopes;
+import Envelope.Envelope;
 
 public class Run {
 
@@ -9,9 +9,9 @@ public class Run {
         while (shouldContinue) {
             //int height = Instruction.chessBoardInstructionAndParse("height");
             //int width = Instruction.chessBoardInstructionAndParse("width");
-            ChessBoard board = new ChessBoard(Instruction.chessBoardInstructionAndParse("height"),
-                    Instruction.chessBoardInstructionAndParse("width")); //height, width);
-            board.BoardToScreen();
+            ChessBoard board = new ChessBoard(InstructionAndParse.chessBoardInstructionAndParse("height"),
+                    InstructionAndParse.chessBoardInstructionAndParse("width")); //height, width);
+            board.boardToScreen();
 
             shouldContinue = ContinueRequest.userAnswer("Task 1");
         }
@@ -24,12 +24,12 @@ public class Run {
         while (shouldContinue) {
         float sides[] = new  float[4];
 
-        System.out.println("Enter sides of envelopes");
+        System.out.println("Enter sides of envelope");
         for (int i = 0; i < sides.length; i++) {
-            sides[i] = Instruction.envelopesCompareInstructionAndParse();
+            sides[i] = InstructionAndParse.envelopeInstructionAndParse();
         }
-        CompareEnvelopes envelopes = new CompareEnvelopes(sides);
-        envelopes.compareMethod();
+        Envelope envelope = new Envelope(sides);
+        envelope.compareMethod();
 
         shouldContinue = ContinueRequest.userAnswer("Task 2");
         }

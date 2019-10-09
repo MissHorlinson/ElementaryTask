@@ -1,7 +1,6 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Instruction {
+public class InstructionAndParse {
 
     static Scanner in = new Scanner(System.in);
 
@@ -29,7 +28,7 @@ public class Instruction {
         System.out.println("Task 2: compare two envelopes and say can we put one into the other\n-------------------------------------------------------------------");
     }
 
-    public static float envelopesCompareInstructionAndParse(){
+    public static float envelopeInstructionAndParse(){
         float sideValue = 0;
 
         System.out.println("Enter envelope parameters");

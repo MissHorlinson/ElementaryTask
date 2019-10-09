@@ -22,15 +22,18 @@ public class TaskChoise {
 
         while (shouldContinue) {
             System.out.println("Input:\n   1 for ChessBoard task\n   2 for Envelope compare task\n____________________________________");
+
+            //InstructionAndParse.isNumber();
             task = in.nextInt();
+
             switch (task) {
                 case 1:
-                    Instruction.chessBoardDescription();
+                    InstructionAndParse.chessBoardDescription();
                     run = new Run();
                     run.chessRun();
                     break;
                 case 2:
-                    Instruction.envelopesCompareDescription();
+                    InstructionAndParse.envelopesCompareDescription();
                     run = new Run();
                     run.envelopeRun();
                     break;
