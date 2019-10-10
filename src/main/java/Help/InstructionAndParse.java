@@ -1,3 +1,5 @@
+package Help;
+
 import java.util.Scanner;
 
 public class InstructionAndParse {
@@ -28,10 +30,10 @@ public class InstructionAndParse {
         System.out.println("Task 2: compare two envelopes and say can we put one into the other\n-------------------------------------------------------------------");
     }
 
-    public static float envelopeInstructionAndParse(){
+    public static float envelopeInstructionAndParse(String number){
         float sideValue = 0;
 
-        System.out.println("Enter envelope parameters");
+        System.out.println(/*"Enter envelope parameters"); // */"Enter " + number + " envelope parameters");
         while (sideValue <= 0) {
             System.out.println("Input positive number > 0 ");
             isNumber();

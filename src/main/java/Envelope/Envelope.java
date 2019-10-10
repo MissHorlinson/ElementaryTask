@@ -1,23 +1,27 @@
 package Envelope;
 
-public class Envelope /*implements Comparable<Envelope>*/ {
+public class Envelope implements Comparable<Envelope> {
     float sideA;
     float sideB;
     float sideC;
     float sideD;
 
-   /* float width;
-    float height;*/
+    float width;
+    float height;
 
     public Envelope() { }
 
-    public Envelope(float arr[])
+    public Envelope(float sideA, float sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
+  /*  public Envelope(float arr[])
     {
         this.sideA = arr[0];
         this.sideB = arr[1];
         this.sideC = arr[2];
         this.sideD = arr[3];
-    }
+    }*/
 
     public float getSideA(){
         return this.sideA;
@@ -30,9 +34,11 @@ public class Envelope /*implements Comparable<Envelope>*/ {
     public float getSideC() { return this.sideC; }
 
     public float getSideD() { return this.sideD; }
-    /*public float getHeight() {return this.height; }
 
-    public float getWidth() {return this.width; }*/
+
+    public float getHeight() {return this.height; }
+
+    public float getWidth() {return this.width; }
 
 
     public void setSideA(float sideA) {this.sideA = sideA; }
@@ -43,7 +49,7 @@ public class Envelope /*implements Comparable<Envelope>*/ {
 
     public void setSideD(float sideD) {this.sideD = sideD; }
 
-   /*public void identifySide(){
+   public void identifySide(){
        if(this.sideA > this.sideB){
            width = sideA;
            height = sideB;
@@ -51,20 +57,21 @@ public class Envelope /*implements Comparable<Envelope>*/ {
            width = sideB;
            height = sideA;
        }
-   }*/
+   }
 
-   /*//@Override
-    public boolean CompareTo(Envelope envelope) {
+   //@Override
+    public int compareTo(Envelope envelope) {
        identifySide();
        if(this.getHeight() > envelope.getHeight()) {
            if(this.getWidth() > envelope.getWidth()) {
-               return true;
+               return 1;
            }
        }
-       return false;
-   }*/
+       return 0;
+   }
 
-    public void compareMethod(){
+
+    /*public void compareMethod(){
 
         double diagonal1, diagonal2;
 
@@ -78,5 +85,5 @@ public class Envelope /*implements Comparable<Envelope>*/ {
         } else{
             System.out.println("No you can`t input one envelope in the other");
         }
-    }
+    }*/
 }

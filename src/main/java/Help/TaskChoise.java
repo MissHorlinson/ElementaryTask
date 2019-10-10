@@ -1,3 +1,8 @@
+package Help;
+
+import Help.ContinueRequest;
+import Help.Run;
+
 import java.util.Scanner;
 
 public class TaskChoise {
@@ -23,7 +28,7 @@ public class TaskChoise {
         while (shouldContinue) {
             System.out.println("Input:\n   1 for ChessBoard task\n   2 for Envelope compare task\n____________________________________");
 
-            //InstructionAndParse.isNumber();
+            //Help.InstructionAndParse.isNumber();
             task = in.nextInt();
 
             switch (task) {
