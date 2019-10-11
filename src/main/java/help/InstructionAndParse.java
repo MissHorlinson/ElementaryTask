@@ -6,8 +6,6 @@ public class InstructionAndParse {
 
     static Scanner in = new Scanner(System.in);
 
-
-
     public static int chessBoardInstructionAndParse(String side){
         int sideValue = 0;
 
