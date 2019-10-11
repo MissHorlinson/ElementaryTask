@@ -1,7 +1,4 @@
-package Help;
-
-import Help.ContinueRequest;
-import Help.Run;
+package help;
 
 import java.util.Scanner;
 

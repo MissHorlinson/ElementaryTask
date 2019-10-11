@@ -1,13 +1,13 @@
-package Envelope;
-import Help.InstructionAndParse;
+package envelope;
+import help.InstructionAndParse;
 
 
 public class CompareEnvelopes {
     Envelope envelopeOne = new Envelope(InstructionAndParse.envelopeInstructionAndParse("first"),
-            InstructionAndParse.envelopeInstructionAndParse("first"));
+                                        InstructionAndParse.envelopeInstructionAndParse("first"));
 
-    Envelope envelopeTwo = new Envelope(Help.InstructionAndParse.envelopeInstructionAndParse("second"),
-            Help.InstructionAndParse.envelopeInstructionAndParse("second"));
+    Envelope envelopeTwo = new Envelope(help.InstructionAndParse.envelopeInstructionAndParse("second"),
+                                        help.InstructionAndParse.envelopeInstructionAndParse("second"));
 
     public void envelopesCompare() {
         if (envelopeOne.compareTo(envelopeTwo) == 1) {

@@ -1,4 +1,4 @@
-package Help;
+package help;
 
 import java.util.Scanner;
 
@@ -17,10 +17,6 @@ public class InstructionAndParse {
         while(sideValue <= 0) {
             System.out.println("It should be positive integer number > 0");
             isNumber();
-            /*while (!in.hasNextInt()) {
-                System.out.println("Input the number: ");
-                in.next();
-            }*/
             sideValue = in.nextInt();
         }
         return sideValue;
@@ -33,14 +29,10 @@ public class InstructionAndParse {
     public static float envelopeInstructionAndParse(String number){
         float sideValue = 0;
 
-        System.out.println(/*"Enter envelope parameters"); // */"Enter " + number + " envelope parameters");
+        System.out.println("Enter " + number + " envelope parameters");
         while (sideValue <= 0) {
             System.out.println("Input positive number > 0 ");
             isNumber();
-            /*while (!in.hasNextFloat()) {
-                System.out.println("Input the number: ");
-                in.next();
-            }*/
             sideValue = in.nextFloat();
         }
         return sideValue;
