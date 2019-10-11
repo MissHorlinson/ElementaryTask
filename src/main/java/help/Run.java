@@ -8,11 +8,11 @@ public class Run {
     public void chessRun() {
         boolean shouldContinue = true;
 
-        while (shouldContinue) {
+        //while (shouldContinue) {
             PrintChessBoard chessBoard = new PrintChessBoard();
             chessBoard.boardToScreen();
-            shouldContinue = ContinueRequest.userAnswer("Task 1");
-        }
+          //  shouldContinue = ContinueRequest.userAnswer("Task 1");
+        //}
     }
 
 
