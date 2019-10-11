@@ -6,9 +6,7 @@ public class InstructionAndParse {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void chessBoardDescription(){
-        System.out.println("Task 1: print the chess board to screen\n---------------------------------------");
-    }
+
 
     public static int chessBoardInstructionAndParse(String side){
         int sideValue = 0;
