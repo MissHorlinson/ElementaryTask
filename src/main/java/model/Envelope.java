@@ -1,4 +1,4 @@
-package envelope;
+package model;
 
 public class Envelope implements Comparable {
     private float sideA;
@@ -41,7 +41,7 @@ public class Envelope implements Comparable {
    }
 
 
-   //@Override
+   @Override
     public int compareTo(Object o) {
         Envelope envelope = (Envelope)o;
        identifySide();
@@ -53,3 +53,4 @@ public class Envelope implements Comparable {
        return 0;
    }
 }
+

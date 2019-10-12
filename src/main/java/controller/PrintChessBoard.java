@@ -1,10 +1,11 @@
-package chess;
+package controller;
 
-import help.InstructionAndParse;
+import servise.InstructionAndParse;
+import model.ChessBoard;
 
 public class PrintChessBoard {
-    ChessBoard board = new ChessBoard(InstructionAndParse.chessBoardInstructionAndParse("height"),
-                                      InstructionAndParse.chessBoardInstructionAndParse("width"));
+    ChessBoard board = new ChessBoard(InstructionAndParse.chessBoard("height"),
+                                      InstructionAndParse.chessBoard("width"));
 
     public void boardToScreen(){
         for(int i = 0; i < board.getHeight(); i++){

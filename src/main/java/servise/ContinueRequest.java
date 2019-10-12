@@ -1,14 +1,17 @@
-package help;
+package servise;
 
-import java.util.Scanner;
+import util.Helper;
+import util.Input;
 
 public class ContinueRequest {
 
     public static boolean userAnswer(String action){
-        Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter y - Yes, if you want to continue " + action + "?");
-        String answer = in.nextLine();
+        Input input = new Input();
+        Helper helper = new Helper();
+
+        helper.continueRequest(action);
+        String answer = input.getString();
         answer = answer.toUpperCase();
 
         if(answer.equals("Y") || answer.equals("YES"))

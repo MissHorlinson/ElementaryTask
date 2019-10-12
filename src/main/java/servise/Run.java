@@ -1,18 +1,13 @@
-package help;
+package servise;
 
-import chess.PrintChessBoard;
-import envelope.CompareEnvelopes;
+import controller.PrintChessBoard;
+import controller.CompareEnvelopes;
 
 public class Run {
 
     public void chessRun() {
-        boolean shouldContinue = true;
-
-        while (shouldContinue) {
             PrintChessBoard chessBoard = new PrintChessBoard();
             chessBoard.boardToScreen();
-            shouldContinue = ContinueRequest.userAnswer("Task 1");
-        }
     }
 
 
