@@ -1,8 +1,8 @@
-import Help.TaskChoise;
+import servise.TaskChoice;
 
 public class Main {
     public static void main(String[] args) {
-        TaskChoise choice = new TaskChoise();
+        TaskChoice choice = new TaskChoice();
         choice.runChosenTask();
     }
 }
