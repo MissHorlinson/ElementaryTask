@@ -2,6 +2,7 @@ package servise;
 
 import controller.PrintChessBoard;
 import controller.CompareEnvelopes;
+import util.Validator;
 
 public class Run {
 
@@ -17,7 +18,7 @@ public class Run {
         while (shouldContinue) {
             CompareEnvelopes compareEnvelopes = new CompareEnvelopes();
             compareEnvelopes.envelopesCompare();
-            shouldContinue = ContinueRequest.userAnswer("Task 2");
+            shouldContinue = Validator.userAnswer("Task 2");
         }
     }
 }

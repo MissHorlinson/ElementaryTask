@@ -1,11 +1,14 @@
 package controller;
 
-import servise.InstructionAndParse;
 import model.ChessBoard;
+import util.Helper;
+import util.Input;
+import util.Output;
 
 public class PrintChessBoard {
-    ChessBoard board = new ChessBoard(InstructionAndParse.chessBoard("height"),
-                                      InstructionAndParse.chessBoard("width"));
+    private static Input input = new Input();
+
+    ChessBoard board = new ChessBoard(chessBoard("height"), chessBoard("width"));
 
     public void boardToScreen(){
         for(int i = 0; i < board.getHeight(); i++){
@@ -22,5 +25,15 @@ public class PrintChessBoard {
         } else{
             System.out.print(" ");
         }
+    }
+
+    public int chessBoard(String side){
+        int sideValue = 0;
+        Helper.chessBoardInstruction(side);
+        while(sideValue <= 0) {
+            Output.negativeNumber();
+            sideValue = input.getInt();
+        }
+        return sideValue;
     }
 }

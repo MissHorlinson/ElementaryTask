@@ -1,8 +1,8 @@
 package model;
 
 public class ChessBoard {
-    int height;
-    int width;
+    private int height;
+    private int width;
 
     public  ChessBoard() {}
 

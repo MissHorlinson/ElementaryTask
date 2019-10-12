@@ -1,15 +1,18 @@
 package controller;
-import servise.InstructionAndParse;
+
 import model.Envelope;
+import util.Helper;
+import util.Input;
+import util.Output;
 
 
 public class CompareEnvelopes {
 
-        Envelope envelopeOne = new Envelope(InstructionAndParse.envelope("first"),
-                InstructionAndParse.envelope("first"));
+    private static Input input = new Input();
 
-        Envelope envelopeTwo = new Envelope(servise.InstructionAndParse.envelope("second"),
-                servise.InstructionAndParse.envelope("second"));
+    Envelope envelopeOne = new Envelope(envelope("first"), envelope("first"));
+
+    Envelope envelopeTwo = new Envelope(envelope("second"), envelope("second"));
 
 
         public void envelopesCompare () {
@@ -20,6 +23,16 @@ public class CompareEnvelopes {
             } else
                 System.out.println("No you can`t input one envelope in the other");
         }
+
+        public float envelope(String number){
+            float sideValue = 0;
+            Helper.envelopeInstruction(number);
+            while (sideValue <= 0) {
+                Output.negativeNumber();
+                sideValue = input.getFloat();
+            }
+            return sideValue;
+    }
 }
 
 

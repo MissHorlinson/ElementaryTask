@@ -2,6 +2,7 @@ package servise;
 
 import util.Helper;
 import util.Input;
+import util.Validator;
 
 public class TaskChoice {
 
@@ -27,7 +28,7 @@ public class TaskChoice {
                     run.envelopeRun();
                     break;
             }
-            shouldContinue = ContinueRequest.userAnswer("program");
+            shouldContinue = Validator.userAnswer("program");
         }
     }
 }
