@@ -3,8 +3,6 @@ package model;
 public class Envelope implements Comparable {
     private float sideA;
     private float sideB;
-    private float width;
-    private float height;
 
     public Envelope() { }
 
@@ -21,30 +19,30 @@ public class Envelope implements Comparable {
         return this.sideB;
     }
 
-    public float getHeight() {return this.height; }
-
-    public float getWidth() {return this.width; }
-
     public void setSideA(float sideA) {this.sideA = sideA; }
 
     public void setSideB(float sideB) {this.sideB = sideB; }
 
 
-   public void identifySide(){
-       if(this.sideA > this.sideB){
-           width = sideA;
-           height = sideB;
+   public float getHeight(){
+       if(this.getSideA() > this.getSideB()){
+           return getSideA();
        } else {
-           width = sideB;
-           height = sideA;
+           return getSideB();
        }
-   }
+    }
 
-
+   public float getWidth(){
+        if(this.getSideA() > this.getSideB()){
+            return getSideB();
+        } else {
+            return getSideA();
+        }
+    }
    @Override
     public int compareTo(Object o) {
         Envelope envelope = (Envelope)o;
-       identifySide();
+
        if(this.getHeight() > envelope.getHeight()) {
            if(this.getWidth() > envelope.getWidth()) {
                return 1;
