@@ -1,15 +1,11 @@
 package util;
 
 public class Validator {
-    public static boolean userAnswer(String action){
 
-        Input input = new Input();
-        Helper helper = new Helper();
+    public Validator() { }
 
-        helper.continueRequest(action);
-        String answer = input.getString();
+    public boolean userAnswer(String answer) {
         answer = answer.toUpperCase();
-
         if(answer.equals("Y") || answer.equals("YES"))
             return true;
         else

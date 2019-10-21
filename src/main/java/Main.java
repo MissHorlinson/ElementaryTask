@@ -1,8 +1,8 @@
-import servise.TaskChoice;
+import servise.ControllerManager;
 
 public class Main {
     public static void main(String[] args) {
-        TaskChoice choice = new TaskChoice();
-        choice.runChosenTask();
+        ControllerManager choiceTask = new ControllerManager();
+        choiceTask.runChosenTask();
     }
 }

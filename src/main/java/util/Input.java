@@ -3,25 +3,14 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner;
 
-    public int getInt(){
-        return scanner.nextInt();
+    public Input() {
+        scanner = new Scanner(System.in);
     }
 
-    public float getFloat(){
-        return scanner.nextFloat();
-    }
-
-    public String getString(){
+    public String getString() {
         return scanner.nextLine();
     }
 
-    public String getNext(){
-        return scanner.next();
-    }
-
-    public boolean isNext(){
-        return scanner.hasNext();
-    }
 }

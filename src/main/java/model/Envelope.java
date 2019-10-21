@@ -24,7 +24,7 @@ public class Envelope implements Comparable {
     public void setSideB(float sideB) {this.sideB = sideB; }
 
 
-   public float getHeight(){
+   public float getHeight() {
        if(this.getSideA() > this.getSideB()){
            return getSideA();
        } else {
@@ -32,13 +32,14 @@ public class Envelope implements Comparable {
        }
     }
 
-   public float getWidth(){
+   public float getWidth() {
         if(this.getSideA() > this.getSideB()){
             return getSideB();
         } else {
             return getSideA();
         }
     }
+
    @Override
     public int compareTo(Object o) {
         Envelope envelope = (Envelope)o;
